@@ -2,6 +2,8 @@
 
 - Aplicação dotnet core mvc de um shopping
 
+---
+
 ## Funcionalidades
 
 - Lista de lojas/kiosques (site):
@@ -23,9 +25,13 @@
     - Formulário de cadastro de loja
     - A campo piso deve apresentar apenas as opções piso 1, piso 2 e piso 3
 
+---
+
 ## Idioma 
 
 - PT-BR
+
+---
 
 ## Tecnologias Utilizadas
 
@@ -34,6 +40,8 @@
 - JavaScript 
 - .NET 6.0
 - C# (C Sharp)
+
+---
 
 ## Uso
 
