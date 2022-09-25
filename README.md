@@ -1,6 +1,6 @@
 # Avaliação do 3º Bimestre de LP3 - Shopping Mvc
 
-- Aplicação dotnet core mvc de um shopping
+- Aplicação dotnet Core MVC de um shopping
 
 ---
 
@@ -40,6 +40,7 @@
 - JavaScript 
 - .NET 6.0
 - C# (C Sharp)
+- Core MVC
 
 ---
 
