@@ -17,10 +17,19 @@ public class LojaController : Controller
 
     public IActionResult CreateLoja(int id, string? piso, string? nome, string? descricao, string? tipo, string? email)
     {
-        id = lojas.Count + 1;
-        lojas.Add(new LojaViewModel(id, piso, nome, descricao, tipo, email));
+        if (lojas.Any(y => y.Nome == nome))
+        {
+            TempData["NameError"] = "Loja localizada com esse nome!";
+            return RedirectToAction("Admin");
+        } 
+        else
+        {
+            id = lojas.Count + 1;
 
-        return RedirectToAction("Admin");
+            lojas.Add(new LojaViewModel(id, piso, nome, descricao, tipo, email));
+
+            return RedirectToAction("Admin");
+        }
     }
 
     public IActionResult DeleteLoja(int id)
