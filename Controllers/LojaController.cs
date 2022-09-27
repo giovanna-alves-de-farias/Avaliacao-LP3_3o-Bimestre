@@ -15,7 +15,7 @@ public class LojaController : Controller
 
     public IActionResult Cadastrar() => View();
 
-    public IActionResult CreateLoja(int id, string? piso, string? nome, string? descricao, string? tipo, string? email)
+    public IActionResult CreateLoja(string? descricao, string? email, int id, string? nome, string? piso,  string? tipo)
     {
         if (lojas.Any(y => y.Nome == nome))
         {
@@ -26,7 +26,7 @@ public class LojaController : Controller
         {
             id = lojas.Count + 1;
 
-            lojas.Add(new LojaViewModel(id, piso, nome, descricao, tipo, email));
+            lojas.Add(new LojaViewModel(descricao,email, id, nome, piso, tipo));
 
             return RedirectToAction("Admin");
         }
